@@ -3,11 +3,12 @@ class ProjectsController < ApplicationController
 
   # GET /projects or /projects.json
   def index
-    @projects = Project.task_left_to_do
+    @projects = Project.all
   end
 
   # GET /projects/1 or /projects/1.json
   def show
+    @tasks = @project.tasks
   end
 
   # GET /projects/new
